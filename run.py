@@ -28,13 +28,7 @@ while True:
         print "Thinking..."
         #move = games.minimax_decision(state, game)
         #move = games.alphabeta_full_search(state, game)
-        if difficulty == '4':
-            move = games.alphabeta_search(state, game, d=4, eval_fn=h1)
-        elif difficulty == '5':
-            move = games.alphabeta_search(state, game, d=5, eval_fn=h1)
-        elif difficulty == '7':
-            move = games.alphabeta_search(state, game, d=7, eval_fn=h1)
-
+        move = games.alphabeta_search(state, game, d=int(difficulty), eval_fn=h1)
         state = game.make_move(move, state)
         print("La maquina ha movido en: ", move)
         player = 'O'
