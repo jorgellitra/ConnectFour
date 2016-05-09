@@ -35,6 +35,7 @@ def k_in_row (board, move, player,(delta_x,delta_y)):
     x, y = move
     n = 0
     z = 0
+	
     while (board.get((x, y)) == None or board.get((x, y)) == player) and y < 8 and x < 7:
         if board.get((x, y)) == player:
             z += 1
