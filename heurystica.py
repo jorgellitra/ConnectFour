@@ -3,12 +3,17 @@ from games import *
 def h1(state):
     bestO = 0
     bestX = 0
+<<<<<<< HEAD
     if state.utility == 1:
         return state.utility * infinity
 	if state.utility == -1:
 		return -state.utility * infinity
+=======
+    if state.utility != 0:
+            return state.utility * infinity
+    
+>>>>>>> origin/master
     for x in legal_moves(state):
-
         (nVX, z1) = k_in_row(state.board, x, 'X',(0,1))
         (nHX, z2) = k_in_row(state.board, x, 'X',(1,0))
         (nDDX, z3) = k_in_row(state.board, x, 'X',(1,1))
