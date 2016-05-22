@@ -1,6 +1,12 @@
+from games import *
+
 def h1(state):
     bestO = 0
     bestX = 0
+    if state.utility == 1:
+        return state.utility * infinity
+	if state.utility == -1:
+		return -state.utility * infinity
     for x in legal_moves(state):
 
         (nVX, z1) = k_in_row(state.board, x, 'X',(0,1))
@@ -10,7 +16,6 @@ def h1(state):
 
         if (z1 or z2 or z3 or z4) >= 4:
             bestX = 50000
-            break
         elif (z1 or z2 or z3 or z4) == 3:
             bestX = 30000
 
@@ -21,7 +26,6 @@ def h1(state):
 
         if (z1 or z2 or z3 or z4) >= 4:
             bestO = 100000
-            break
         elif (z1 or z2 or z3 or z4) == 3:
             bestO = 60000
 
