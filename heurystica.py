@@ -5,10 +5,10 @@ def h1(state):
     bestX = 0
     totalO = 0
     totalX = 0
-    if state.utility == -1:
-        return -state.utility * infinity
     if state.utility == 1:
-        return state.utility * infinity
+        return infinity
+    if state.utility == -1:
+        return -infinity
 
     for x in legal_moves(state):
         totalX += k_in_row(state.board, x, 'X',(0,1))
