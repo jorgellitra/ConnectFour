@@ -1,9 +1,8 @@
 import games
 from heurystica import *
-from suso import *
 
 player = raw_input("Introduzca primer jugador (X = Maquina, O = Persona): ")
-difficulty = raw_input("Introduzca la dificultad de la partida (4 =  Facil, 5 = Media, 7 = Dificil): ")
+difficulty = raw_input("Introduzca la dificultad de la partida (1 =  Facil, 3 = Media, 4 = Dificil): ")
 game = games.ConnectFour(p=player)
 
 state = game.initial
